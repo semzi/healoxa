@@ -1,0 +1,377 @@
+.leadsContainer {
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  font-family: var(--font-gt-walsheim), sans-serif;
+}
+
+.title p {
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.dark .title p {
+  color: #94a3b8;
+}
+
+.tableCard {
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.dark .tableCard {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.tableHeader {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcfcfc;
+}
+
+.dark .tableHeader {
+  border-bottom-color: #1e293b;
+  background: #151515;
+}
+
+.searchContainer {
+  position: relative;
+  width: 300px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.75rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.dark .searchInput {
+  background: #0f172a;
+  border-color: #334155;
+  color: white;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #84cc16;
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.1);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.leadsTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leadsTable th {
+  padding: 1.25rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+.dark .leadsTable th {
+  background: #111111;
+  color: #94a3b8;
+}
+
+.leadsTable td {
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.dark .leadsTable td {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.campaignBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #f0fdf4;
+  color: #16a34a;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dark .campaignBadge {
+  background: #064e3b;
+  color: #4ade80;
+}
+
+.responseData {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.responseItem {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.fieldLabel {
+  font-weight: 700;
+  color: #64748b;
+  min-width: 100px;
+}
+
+.dark .fieldLabel {
+  color: #94a3b8;
+}
+
+.fieldValue {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.dark .fieldValue {
+  color: #e2e8f0;
+}
+
+.timestamp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.25rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.dark .exportBtn {
+  background: #1e293b;
+  border-color: #334155;
+  color: white;
+}
+
+.exportBtn:hover {
+  background: #f8fafc;
+  border-color: #84cc16;
+}
+
+.dark .exportBtn:hover {
+  background: #334155;
+}
+
+.emptyState {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.campaignGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.campaignCard {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .campaignCard {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.campaignCard:hover {
+  transform: translateY(-8px);
+  border-color: #84cc16;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  background: #f7fee7;
+  color: #65a30d;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.dark .cardIcon {
+  background: #111811;
+  color: #84cc16;
+}
+
+.campaignCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.leadCount {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dark .leadCount {
+  color: #94a3b8;
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.countBadge {
+  background: #f1f5f9;
+  color: #1e293b;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.dark .countBadge {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  background: transparent;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.backBtn:hover {
+  color: #1e293b;
+  transform: translateX(-4px);
+}
+
+.dark .backBtn:hover {
+  color: white;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title h1 {
+    font-size: 1.5rem;
+  }
+
+  .tableHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .searchContainer {
+    width: 100%;
+  }
+
+  .leadsTable th,
+  .leadsTable td {
+    padding: 1rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .campaignGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .campaignCard {
+    padding: 1.25rem;
+  }
+
+  .campaignCard:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .leadsTable th,
+  .leadsTable td {
+    padding: 0.75rem 1rem;
+  }
+
+  .responseItem {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .fieldLabel {
+    min-width: unset;
+  }
+}
